@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Puzzle</title>
+  <!-- CSS files-->
+  <link rel="stylesheet" href="css/puzzle.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="winScreen d-none" id="winScreen">
+      <div class="winData">
+        <h1 class="winText">You Win!</h1>
+        <div class="winInfo">
+          <div class="winButtons">
+            <button type="button" class="button-win" id="closeWinScreen">Exit</button>
+            <button type="button" class="button-win" id="winShuffle">Shuffle</button>
+          </div>
+          <div class="score">
+            <div class="info-win">Movements: <span id="winMovements"></span></div>
+            <div class="info-win">Time: <span id="winTime"></span>s</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="topBar">
+        <div class="options">
+          <div class="row-options">
+            <button type="button" class="button" id="reset">Reset</button>
+            <button type="button" class="button" id="shuffle">Shuffle</button>
+            <div class="info">Movements: <span id="movements"></span></div>
+            <div class="info">Time: <span id="timer"></span>s</div>
+          </div>
+          <div class="row-options">
+            <div class="checkboxDiv">
+              <input class="d-none" type="checkbox" id="photoCheckbox">
+              <label class="button" for="photoCheckbox" id="photoCheckboxLabel">Show Photo</label>
+            </div>
+            <input type="file" class="d-none" id="imageInput">
+            <button type="button" class="button" id="imageInputButton">Upload Photo</button>
+            <div class="button" id="difficultyDiv">
+              <label for="difficultyInput">Difficulty</label>
+              <select name="difficultyInput" id="difficultyInput">
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pieces" id="pieces"></div>
+    </div>
+
+   
+  </div>
+  <!-- JavaScript files-->
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
